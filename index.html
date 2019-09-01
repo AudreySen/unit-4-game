@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Crystal Collector Game</title>
+    <link rel="stylesheet" href="assets/stylesheets/reset.css">
+    <link rel="stylesheet" href="assets/stylesheets/style.css">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>The Crystal Collector Game</h1>
+    </header>
+    <div>
+        <p>You will be given a random number at the start of the game.</p>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+        <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
+        <p>Each time when the game starts, the game will change the values of each crystal.</p>
+
+        <ul>
+            <li id="rouge">red</li>
+            <li id="bleu">bleu</li>
+            <li id="jaune">jaune</li>
+            <li id="vert">vert</li>
+        </ul>
+    </div>
+    <div class="logo">
+        <img src="assets/images/nomImage.jpeg" class=photoAcliquer id="bouton1" alt="rouge">
+        <img src="assets/images/nomImage.jpeg" class=photoAcliquer id="bouton2" alt="bleu">
+        <img src="assets/images/nomImage.jpeg" class=photoAcliquer id="bouton3" alt="jaune">
+        <img src="assets/images/nomImage.png" class=photoAcliquer id="bouton4" alt="vert">
+    </div>
+
+    <h2>Number to be reached
+        <span id="numeroAatteindre"></span>
+    </h2>
+    <h2>Wins:</h2>
+    <span id="gagne"></span>
+    <h2>Losses:</h2>
+    <span id="perdu"></span>
+    <h2>Your score:</h2>
+    <span id="resultat"></span>
+
+
+
+    <!-- Java script's link -->
+    <script src="./assets/javascript/game.js"></script>
+    <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap's javascript file that allows the dropdown menu to work  -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
