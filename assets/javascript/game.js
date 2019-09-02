@@ -1,49 +1,57 @@
-//!!!!!!!!!!!!! I still don't understand this line of code; !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 $(document).ready(function() {
+    //This code makes sure that the JavaScript doesn't get run until the HTML is finished loading          
 
-            //Pointe cet id dans mon HTML:
-            $("#numeroAatteindre").text(auHasard);
-            //Un nombre a atteindre au hasard entre 19 et 120 s'affiche au hasard.
-            var auHasard = Math.floor(Math.random() * 120) + 19
+    //Un nombre a atteindre entre 19 et 120 s'affiche au hasard:
+    var auHasard = Math.floor(Math.random() * 120) + 19
+    console.log auHasard
 
-            //Ai cree 4 variables avec un chiffre au hasard entre 1 et 12:
-            var rubis = Math.floor(Math.random() * 12) + 1;
-            var saphir = Math.floor(Math.random() * 12) + 1;
-            var ambre = Math.floor(Math.random() * 12) + 1;
-            var emeraude = Math.floor(Math.random() * 12) + 1;
+    //Pointe l'id "numeroAatteindre", donné au hasard, dans mon HTML:
+    $("#numeroAatteindre").text(auHasard);
 
-            //Pointe ces id dans mon html:
-            $("gagne").text(gagne);
-            $
-            //Je declare trois variables pour le compteur:
-            var total = 0;
-            var gagne = 0;
-            var perdu = 0;
+    //Je déclare trois variables pour créer le compteur:
+    var scoreTotal = 0;
+    var scoreGagne = 0;
+    var scorePerdu = 0;
 
-            // Ces methodes imprimeront a l'ecran le score total, les points gagnes et perdus:
-            scoreTotal.textContent = total;
-            scoreGagne.textContent = gagne;
-            scorePerdu.textContent = perdu;
+    //Pointe ces id dans mon html:
+    $("#gagne").text(scoreGagne);
+    $("#perdu").text(scorePerdu);
+    $("#resultat").text(scoreResultat);
 
-            // Chaque fois que le joueur clique une touche, une valeur entre 1-12 s'affiche au hasard:
-            $(".rouge").on("click", function() {
-                    var auHasard = Math.floor(Math.random() * 12) + 1;
+    // Ces methodes indiqueront à l'écran le score total, les points gagnés et perdus:
+    scoreTotal.textContent = total;
+    scoreGagne.textContent = gagne;
+    scorePerdu.textContent = perdu;
 
-                    $(".bleu").on("click", function()
+    //Ai cree 4 variables avec un chiffre au hasard entre 1 et 12:
+    var valeurRouge = Math.floor(Math.random() * 12) + 1;
+    var valeurBleu = Math.floor(Math.random() * 12) + 1;
+    var valeurJaune = Math.floor(Math.random() * 12) + 1;
+    var valeurVert = Math.floor(Math.random() * 12) + 1;
 
+    //Stocker les valeurs de chaque cristal le temps de la partie (mais ne pas l'afficher dans mon html):
 
+    // Chaque fois que le joueur clique une touche, la valeur de chaque cristal (un nombre au hasard entre 1 et 12) s'additionne sur le compteur id "additionClics":
 
-                    })
+    $(".rouge").on("click", function() {
 
+        }
 
+        $(".bleu").on("click", function() {
 
+            }
 
 
 
 
+        })
 
+    //If statement: Si le chiffre donné est atteint, le joueur gagne et un point s'ajoute au un compteur score gagnés:
+    //Si le chiffre donné est dépassé, le joueur perd et un point s'ajoute au un compteur score perdu:
 
 
+    // Nouveau nombre à deviner:
+    // Nouvelles valeurs des differents cristaux:
 
 
 
@@ -137,4 +145,12 @@ $(document).ready(function() {
 
 
 
-            });
+
+
+
+
+
+
+
+
+});

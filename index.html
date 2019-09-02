@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <h1>The Crystal Collector Game</h1>
+        <h1>Crystal's Collector</h1>
     </header>
     <div>
         <p>You will be given a random number at the start of the game.</p>
@@ -22,32 +22,26 @@
         <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
         <p>The value of each crystal is hidden from you until you click on it.</p>
         <p>Each time when the game starts, the game will change the values of each crystal.</p>
-
-        <ul>
-            <li id="rouge">red</li>
-            <li id="bleu">bleu</li>
-            <li id="jaune">jaune</li>
-            <li id="vert">vert</li>
-        </ul>
     </div>
+
+
+    <h2>Number to be reached:<span id="numeroAatteindre"></span></h2>
+
+    <h2>Wins:<span id="gagne"></span></h2>
+
+    <h2>Losses:<span id="perdu"></span></h2>
+
     <div class="logo">
-        <img src="assets/images/nomImage.jpeg" class=photoAcliquer id="bouton1" alt="rouge">
-        <img src="assets/images/nomImage.jpeg" class=photoAcliquer id="bouton2" alt="bleu">
-        <img src="assets/images/nomImage.jpeg" class=photoAcliquer id="bouton3" alt="jaune">
-        <img src="assets/images/nomImage.png" class=photoAcliquer id="bouton4" alt="vert">
+        <img src="assets/images/nomImage.jpeg" class=photoAcliquer id="boutonRouge" alt="logoRouge">
+        <img src="assets/images/nomImage.jpeg" class=photoAcliquer id="boutonBleu" alt="logoBleu">
+        <img src="assets/images/nomImage.jpeg" class=photoAcliquer id="boutonJaune" alt="logoJaune">
+        <img src="assets/images/nomImage.png" class=photoAcliquer id="boutonVert" alt="logoVert">
     </div>
+    <h2>Your total score is:
+        <span id="resultat"></span></h2>
 
-    <h2>Number to be reached
-        <span id="numeroAatteindre"></span>
-    </h2>
-    <h2>Wins:</h2>
-    <span id="gagne"></span>
-    <h2>Losses:</h2>
-    <span id="perdu"></span>
-    <h2>Your score:</h2>
-    <span id="resultat"></span>
-
-
+    <!--Mettre un compteur avec un chiffre qui additionne chaque valeur des critstaux quand le joueur clique-->
+    <h2><span id="additionClics"></span></h2>
 
     <!-- Java script's link -->
     <script src="./assets/javascript/game.js"></script>
