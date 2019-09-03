@@ -1,82 +1,84 @@
 $(document).ready(function() {
     //This code makes sure that the JavaScript doesn't get run until the HTML is finished loading          
 
-    //Le nombre à atteindre entre 19 et 120 est généré au hasard:
-    var auHasard = Math.floor(Math.random() * 101) + 19
+    //A randomly generated number to be reached between 19 and 120:
+    var randomly = Math.floor(Math.random() * 101) + 19
 
-    //Pointe l'id "numeroAatteindre", généré au hasard, dans mon HTML:
-    $("#numeroAatteindre").text(auHasard);
-    console.log(auHasard)
+    //Pointed my id "numberToReach", randomly generated in my HTML:
+    $("#numberToReach").text(randomly);
+    console.log(randomly)
 
-    //Je déclare deux variables pour créer le compteur:
-    var compteur = 0;
-    var scoreGagne = 0;
-    var scorePerdu = 0;
+    //I declare 3 var to create counters:
+    var counter = 0;
+    var wonScore = 0;
+    var lostScore = 0;
 
-    function() {
-        //!!!!!!!!!!! Créer une fonction qui affiche le message You win! chaque fois qu'un point est gagné. Revoir cela, pas la bonne fonction, il faut la lier au compteur !!!!!
+    function incrementWins() {
+        //!!!!!!!!!!! Create a fonction to display the message You win! each time a point is won. Revoir cela, pas la bonne fonction, il faut la lier au compteur !!!!!
         alert("You win!");
-        scoreGagne++;
-        // Ces methodes indiqueront à l'écran les points gagnés et perdus:
-        scoreGagne.textContent = gagne;
+        wonScore++;
+        // These methods will display points won and lossed:
+        wonScore.textContent = win;
     }
-    //Pointe cet id dans mon html: 
-    $("#gagne").text(scoreGagne);
+    //Pointed this id in my html: 
+    $("#win").text(wonScore);
 
-    function() {
-        //!!!!!!!!!!! Créer une fonction qui affiche le message You win! chaque fois qu'un point est gagné. Revoir cela, pas la bonne fonction, il faut la lier au compteur !!!!!
+    function incrementLosses() {
+        //!!!!!!!!!!! Create a fonction to display the message You win! each time a point is won. Revoir cela, pas la bonne fonction, il faut la lier au compteur !!!!!
         alert("You lose!");
-        scorePerdu++;
-        // Ces methodes indiqueront à l'écran les points gagnés et perdus:
-        scorePerdu.textContent = perdu;
+        lostScore++;
+        // These methods will display points won and lossed:
+        lostScore.textContent = lost;
     }
-    //Pointe cet id dans mon html: 
-    $("#perdu").text(scorePerdu);
+    //Pointed this id in my html: 
+    $("#lost").text(lostScore);
 
-    // Chaque fois que le joueur clique une touche, la valeur de chaque cristal (un nombre au hasard entre 1 et 12) s'additionne sur le compteur id "additionClics":
-    // !!!!!!!! Ou essayer cette methode: !!!!!!!!!!!!!!
+    //
+
+    // Each time the player click a crystal, each crystal value (a random number between 1 and 12) is added to the id "additionClics":
+    // !!!!!!!! Or try this method: !!!!!!!!!!!!!!
     //$("button").click(function(){
     //$("p").hide();
 
-    $("#boutonRouge").on("click", function() {
-        //Ai crée 1 variable avec un chiffre au hasard entre 1 et 12:
-        var valeurHasardR = Math.floor(Math.random() * 12) + 1;
-        console.log(valeurHasardR);
+    $("#redButton").on("click", function() {
+        //Created 1 variable with a random number between 1 et 12:
+        var randomValueR = Math.floor(Math.random() * 12) + 1;
+        console.log(randomValueR);
     });
 
-    $("#boutonBleu").on("click", function() {
-        //Ai crée 1 variable avec un chiffre au hasard entre 1 et 12:
-        var valeurHasardB = Math.floor(Math.random() * 12) + 1;
-        console.log(valeurHasardB);
+    $("#blueButton").on("click", function() {
+        //Created 1 variable with a random number between 1 et 12:
+        var randomValueB = Math.floor(Math.random() * 12) + 1;
+        console.log(randomValueB);
     });
 
-    $("#boutonJaune").on("click", function() {
-        //Ai crée 1 variable avec un chiffre au hasard entre 1 et 12:
-        var valeurHasardJ = Math.floor(Math.random() * 12) + 1;
-        console.log(valeurHasardJ);
+    $("#yellowButton").on("click", function() {
+        //Created 1 variable with a random number between 1 et 12:
+        var randomValueJ = Math.floor(Math.random() * 12) + 1;
+        console.log(randomValueJ);
     });
 
-    $("#boutonVert").on("click", function() {
-        //Ai crée 1 variable avec un chiffre au hasard entre 1 et 12:
-        var valeurHasardV = Math.floor(Math.random() * 12) + 1;
-        console.log(valeurHasardV);
+    $("#greenButton").on("click", function() {
+        //Created 1 variable with a random number between 1 et 12:
+        var randomValueV = Math.floor(Math.random() * 12) + 1;
+        console.log(randomValueV);
     });
-    /// !!!!!!!!!!!!!!!! Je ne sais pas si il faut garder cela en plus!!!!!!!!
-    //Create 4 strings which will hold crystals values (ne pas les afficher dans mon html):
-    var valeurRouge = "";
-    var valeurBleu = "";
-    var valeurJaune = "";
-    var valeurvert = "";
+    /// !!!!!!!!!!!!!!!! I'm not sure I have to keep this added!!!!!!!!
+    //Create 4 strings which will hold crystals values (not displayed in my html):
+    var redValue = "";
+    var blueValue = "";
+    var yellowValue = "";
+    var greenValue = "";
 
     //!!!!!!!!!!!Then initiate a loop to generate 4 separate numbers:!!!!!!! NOT SURE OF THAT EITHER
-    for (var i = 0; i < 12; i++) {
+    for (var i = 0; i < 4; i++) {
 
 
     }
-    //If statement: Si le chiffre donné est atteint, le joueur gagne, un message "You won" s'affiche et un point s'ajoute au un compteur score gagnés:
-    //Si le chiffre donné est dépassé, le joueur perd, un message "You lost" s'affiche et un point s'ajoute au un compteur score perdu:
+    //If statement: If the given number is reached, the player win, a message "You won" is displayed and a point is added to the scoreWons:
+    //If the given number is exceeded, the player losses, a message "You lost" is displayed and a point is added to the LostsScore:
 
-    $("#resultat").text(phraseResultat);
-    // Nouveau nombre à deviner:
-    // Nouvelles valeurs des differents cristaux
+
+    // !!!!!!!!! Generate a new number to be reached:
+    // !!!!!!!!! Generate new values for each cristals:
 });

@@ -16,8 +16,6 @@ I created a game where the player has to guess the answer, just like in Word Gue
 
 Each time I made changes to the local repository, I pushed them to GitHub.
 
-I went to my GitHub repositories. I scroll down to find the right repository.
-
 I deployed my site by using GitHub pages to create a live site.
 
 ## Technologies used
