@@ -13,41 +13,65 @@ $(document).ready(function() {
     var scoreGagne = 0;
     var scorePerdu = 0;
 
-    //Pointe ces id dans mon html:
+    function() {
+        //!!!!!!!!!!! Créer une fonction qui affiche le message You win! chaque fois qu'un point est gagné. Revoir cela, pas la bonne fonction, il faut la lier au compteur !!!!!
+        alert("You win!");
+        scoreGagne++;
+        // Ces methodes indiqueront à l'écran les points gagnés et perdus:
+        scoreGagne.textContent = gagne;
+    }
+    //Pointe cet id dans mon html: 
     $("#gagne").text(scoreGagne);
-    $("#perdu").text(scorePerdu);
 
-    // Ces methodes indiqueront à l'écran les points gagnés et perdus:
-    scoreGagne.textContent = gagne;
-    scorePerdu.textContent = perdu;
+    function() {
+        //!!!!!!!!!!! Créer une fonction qui affiche le message You win! chaque fois qu'un point est gagné. Revoir cela, pas la bonne fonction, il faut la lier au compteur !!!!!
+        alert("You lose!");
+        scorePerdu++;
+        // Ces methodes indiqueront à l'écran les points gagnés et perdus:
+        scorePerdu.textContent = perdu;
+    }
+    //Pointe cet id dans mon html: 
+    $("#perdu").text(scorePerdu);
 
     // Chaque fois que le joueur clique une touche, la valeur de chaque cristal (un nombre au hasard entre 1 et 12) s'additionne sur le compteur id "additionClics":
     // !!!!!!!! Ou essayer cette methode: !!!!!!!!!!!!!!
     //$("button").click(function(){
     //$("p").hide();
 
-    $("#boutonRouge").on("click", function() {});
+    $("#boutonRouge").on("click", function() {
+        //Ai crée 1 variable avec un chiffre au hasard entre 1 et 12:
+        var valeurHasardR = Math.floor(Math.random() * 12) + 1;
+        console.log(valeurHasardR);
+    });
 
-    $("#boutonBleu").on("click", function() {});
+    $("#boutonBleu").on("click", function() {
+        //Ai crée 1 variable avec un chiffre au hasard entre 1 et 12:
+        var valeurHasardB = Math.floor(Math.random() * 12) + 1;
+        console.log(valeurHasardB);
+    });
 
-    $("#boutonJaune").on("click", function() {});
+    $("#boutonJaune").on("click", function() {
+        //Ai crée 1 variable avec un chiffre au hasard entre 1 et 12:
+        var valeurHasardJ = Math.floor(Math.random() * 12) + 1;
+        console.log(valeurHasardJ);
+    });
 
-    $("#boutonVert").on("click", function() {});
-
-    //Create 4 strings which will hold crystals numbers (ne pas les afficher dans mon html):
+    $("#boutonVert").on("click", function() {
+        //Ai crée 1 variable avec un chiffre au hasard entre 1 et 12:
+        var valeurHasardV = Math.floor(Math.random() * 12) + 1;
+        console.log(valeurHasardV);
+    });
+    /// !!!!!!!!!!!!!!!! Je ne sais pas si il faut garder cela en plus!!!!!!!!
+    //Create 4 strings which will hold crystals values (ne pas les afficher dans mon html):
     var valeurRouge = "";
     var valeurBleu = "";
     var valeurJaune = "";
     var valeurvert = "";
 
-    //!!!!!!!!!!!Then initiate a loop to generate 4 separate numbers:!!!!!!! NOT SURE OF THAT
+    //!!!!!!!!!!!Then initiate a loop to generate 4 separate numbers:!!!!!!! NOT SURE OF THAT EITHER
     for (var i = 0; i < 12; i++) {
 
-        //Ai crée 4 variables avec un chiffre au hasard entre 1 et 12:
-        var valeurHasardR = Math.floor(Math.random() * 11) + 1;
-        var valeurHasardB = Math.floor(Math.random() * 11) + 1;
-        var valeurHasardJ = Math.floor(Math.random() * 11) + 1;
-        var valeurHasardV = Math.floor(Math.random() * 11) + 1;
+
     }
     //If statement: Si le chiffre donné est atteint, le joueur gagne, un message "You won" s'affiche et un point s'ajoute au un compteur score gagnés:
     //Si le chiffre donné est dépassé, le joueur perd, un message "You lost" s'affiche et un point s'ajoute au un compteur score perdu:
