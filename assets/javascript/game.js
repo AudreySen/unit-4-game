@@ -33,7 +33,12 @@ $(document).ready(function() {
     //Pointed this id in my html: 
     $("#lost").text(lostScore);
 
-    //
+    //If statement: If the given number is reached, the player win, a message "You won" is displayed and a point is added to the scoreWons:
+    //--------> if #sumClicks = #numberToReach, then + 1 point added to wonScore and message displayed "You win".
+
+    //If the given number is exceeded, the player losses, a message "You lost" is displayed and a point is added to the LostsScore:
+    //--------> else #sumClicks > #numberToReach, then + 1 point added to lostScore and message displayed "You lost".
+
 
     // Each time the player click a crystal, each crystal value (a random number between 1 and 12) is added to the id "additionClics":
     // !!!!!!!! Or try this method: !!!!!!!!!!!!!!
@@ -70,15 +75,33 @@ $(document).ready(function() {
     var yellowValue = "";
     var greenValue = "";
 
+    //I have to find something which will display the sum of the values of the different crystals
+    //-----------> redValue+blueValue+yellowValue+greenValue= sumNumber displayed in id #sumClicks
+
+    // $("#redButton").append(redValue);
+    // $("#rblueButton").append(blueValue);
+    // $("#yellowButton").append(yellowValue);
+    // $("#greenButton").append(greenValue);
+
+
+    ///Want to try this 2nd method:
+    $("#sumClicks").click(function() {
+        var redValue = $("#redButton").val();
+        var blueValue = $("#blueButton").val();
+        var yellowValue = $("#yellowButton").val();
+        var greenValue = $("#greenButton").val();
+
+        var totalClicks = parseInt(redButton) + parseInt(blueButton) + parseInt(yellowButton) + parseInt(greenButton);
+        alert(totalClicks);
+        $("#sumClick").val(totalClicks);
+    })
+
     //!!!!!!!!!!!Then initiate a loop to generate 4 separate numbers:!!!!!!! NOT SURE OF THAT EITHER
-    for (var i = 0; i < 4; i++) {
+    //for (var i = 0; i < 4; i++) {
 
 
-    }
-    //If statement: If the given number is reached, the player win, a message "You won" is displayed and a point is added to the scoreWons:
-    //If the given number is exceeded, the player losses, a message "You lost" is displayed and a point is added to the LostsScore:
+})
 
 
-    // !!!!!!!!! Generate a new number to be reached:
-    // !!!!!!!!! Generate new values for each cristals:
-});
+// !!!!!!!!! Generate a new number to be reached:
+// !!!!!!!!! Generate new values for each cristals:
