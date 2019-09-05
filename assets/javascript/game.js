@@ -26,7 +26,6 @@
      $("#redButton").on("click", function() {
          totalScore = randomValueR + (totalScore)
          $("#sumClicks").text(totalScore);
-         //Created 1 variable with a random number between 1 and 12:
          console.log(randomValueR);
          console.log(totalScore);
          //Created 2 conditionals :
@@ -44,7 +43,6 @@
      $("#blueButton").on("click", function() {
          totalScore = randomValueB + (totalScore)
          $("#sumClicks").text(totalScore);
-         //Created 1 variable with a random number between 1 and 12:
          console.log(randomValueB);
          console.log(totalScore);
          if (totalScore === randomly) {
@@ -61,7 +59,6 @@
      $("#yellowButton").on("click", function() {
          totalScore = randomValueJ + (totalScore)
          $("#sumClicks").text(totalScore);
-         //Created 1 variable with a random number between 1 and 12:
          console.log(randomValueJ);
          console.log(totalScore);
          if (totalScore === randomly) {
@@ -78,7 +75,6 @@
      $("#greenButton").on("click", function() {
          totalScore = randomValueG + (totalScore)
          $("#sumClicks").text(totalScore);
-         //Created 1 variable with a random number between 1 and 12:
          console.log(randomValueG);
          console.log(totalScore);
          if (totalScore === randomly) {
@@ -118,31 +114,5 @@
          randomly = Math.floor(Math.random() * 101) + 19
          $("#numberToReach").text(randomly);
      }
-
-
-
-     //If statement: If the given number is reached, the player win, a message "You won" is displayed and a point is added to the scoreWons:
-     //--------> if #sumClicks = #numberToReach, then + 1 point added to wonScore and message displayed "You win".
-
-     //If the given number is exceeded, the player losses, a message "You lost" is displayed and a point is added to the LostsScore:
-     //--------> else #sumClicks > #numberToReach, then + 1 point added to lostScore and message displayed "You lost".
-
-     /// !!!!!!!!!!!!!!!! I'm not sure I have to keep this added!!!!!!!!
-     //Create 4 strings which will hold crystals values (not displayed in my html):
-     //  var redValue = "";
-     //  var blueValue = "";
-     //  var yellowValue = "";
-     //  var greenValue = "";
-
-     //I have to find something which will display the sum of the values of the different crystals
-     //-----------> redValue+blueValue+yellowValue+greenValue= sumNumber displayed in id #sumClicks
-
-     // $("#redButton").append(redValue);
-     // $("#rblueButton").append(blueValue);
-     // $("#yellowButton").append(yellowValue);
-     // $("#greenButton").append(greenValue);
-
-
-
 
  })
